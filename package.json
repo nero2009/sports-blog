@@ -1,0 +1,27 @@
+{
+  "name": "sportsblog",
+  "version": "1.0.0",
+  "description": "simple sports blog",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "*",
+    "connect-flash": "*",
+    "express": "*",
+    "express-messages": "*",
+    "express-session": "*",
+    "express-validator": "*",
+    "moment": "*",
+    "mongoose": "*",
+    "pug": "^2.0.0-beta6",
+    "passport": "*",
+    "passport-local": "*",
+    "passport-http": "*",
+    "bcryptjs": "*"
+  }
+}

@@ -1,0 +1,26 @@
+extends layout
+
+block content
+    .container
+        ul.errors
+                if errors
+                    each error, i in errors
+                        li.alert.alert-danger #{error.msg}
+        
+        form(method='post', action='/register')
+            div.form-group
+                label Name
+                input.form-control(type='text', name='name', placeholder='Name')
+            div.form-group
+                label Username
+                input.form-control(type='text', name='username', placeholder='Username')
+            div.form-group
+                label Email
+                input.form-control(type='text', name='email', placeholder='Email')
+            div.form-group
+                label Password
+                input.form-control(type='text', name='password', placeholder='Enter Password')
+            div.form-group
+                label Confirm Password
+                input.form-control(type='text', name='password2', placeholder='Confirm Password')
+            button.btn.btn-primary(type='submit') Register
