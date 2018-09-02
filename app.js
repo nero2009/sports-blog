@@ -9,10 +9,14 @@ const mongoose = require('mongoose')
 
 
 //Mongoose onnect
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://nero:fifa2009@ds016068.mlab.com:16068/sportsblog').then(()=>{
-  console.log("connected to database")
-}).catch((err)=>{
-  console.log("Not Connected to Database ERROR! ", err)
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://nero:fifa2009@ds016068.mlab.com:16068/sportsblog')
+
+mongoose.connection.on('connected', ()=>{
+  console.log(`database connected`)
+})
+
+mongoose.connection.on('error', (err)=>{
+  console.log(`mongoose connection err: `, err)
 })
 
 const db = mongoose.connection;

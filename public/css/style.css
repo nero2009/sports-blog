@@ -30,7 +30,9 @@
 }
 
 .showcase{
-    background-image: url('/img/home-bg.jpg') no repeat 0 -150px;
+    background-image: url('/img/home-bg.jpg');
     min-height: 400px;
-    color:white
+    color:white;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
